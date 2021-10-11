@@ -6,8 +6,10 @@ class Button extends Component {
   renderButton(color) {
     return (
       <button className={`ui button ${color}`}>
+      
         <LanguageContext.Consumer>
           {(value) => (value === "english" ? "Submit" : "Voorleggen")}
+          //callback function must be needed
         </LanguageContext.Consumer>
       </button>
     );
